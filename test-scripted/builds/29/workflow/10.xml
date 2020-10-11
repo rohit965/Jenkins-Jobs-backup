@@ -1,0 +1,31 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.5">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@2.83">
+    <parentIds>
+      <string>9</string>
+    </parentIds>
+    <id>10</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.EnvStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.83">
+      <arguments>
+        <entry>
+          <string>overrides</string>
+          <list>
+            <string>GIT_BRANCH=origin/master</string>
+            <string>GIT_COMMIT=fe2f35ad7616f73e7857fb4b7ad3b08c64707029</string>
+            <string>GIT_PREVIOUS_COMMIT=4954e40791d5e39917d9506bf28be41c8572af8b</string>
+            <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT=30dae4ab31fc4f96b9d6b05580b7aaa02c790526</string>
+            <string>GIT_URL=https://github.com/rohit965/LoginWebApp.git</string>
+          </list>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1600947807022</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>

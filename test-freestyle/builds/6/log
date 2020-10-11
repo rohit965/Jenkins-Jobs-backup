@@ -1,0 +1,150 @@
+Started by user [8mha:////4LnGKCCAp0zVlxlThhV+FjTjl4m/y1eaDP6NcMA3qyRdAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/test-freestyle
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rohit965/JavaApp.git # timeout=10
+Fetching upstream changes from https://github.com/rohit965/JavaApp.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+ > git fetch --tags --progress -- https://github.com/rohit965/JavaApp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 145e1b86690d235e18d32c11b9db94fac52a196e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 145e1b86690d235e18d32c11b9db94fac52a196e # timeout=10
+Commit message: "Initial commit"
+ > git rev-list --no-walk 145e1b86690d235e18d32c11b9db94fac52a196e # timeout=10
+[test-freestyle] $ /bin/sh -xe /tmp/jenkins9695462630092925870.sh
++ echo Hello World..!
+Hello World..!
+[test-freestyle] $ /usr/share/maven/bin/mvn clean compile
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------< [0;36mcom.mycompany:JavaApp[0;1m >------------------------[m
+[[1;34mINFO[m] [1mBuilding JavaApp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/lib/jenkins/workspace/test-freestyle/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/test-freestyle/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /var/lib/jenkins/workspace/test-freestyle/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.370 s
+[[1;34mINFO[m] Finished at: 2020-10-06T12:00:13Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[test-freestyle] $ /opt/sonarscanner/sonar-scanner-4.1.0.1829-linux/bin/sonar-scanner -Dsonar.host.url=http://10.128.0.50:9000 ******** -Dsonar.projectKey=JavaApp -Dsonar.projectName=JavaApp -Dsonar.sources=/var/lib/jenkins/workspace/test-freestyle/src -Dsonar.java.binaries=**/target/classes -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/test-freestyle
+INFO: Scanner configuration file: /opt/sonarscanner/sonar-scanner-4.1.0.1829-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarQube Scanner 4.1.0.1829
+INFO: Java 11.0.3 AdoptOpenJDK (64-bit)
+INFO: Linux 5.4.0-1025-gcp amd64
+INFO: User cache: /var/lib/jenkins/.sonar/cache
+INFO: SonarQube server 7.5.0
+INFO: Default locale: "en", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Publish mode
+INFO: Load global settings
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.protobuf.UnsafeUtil (file:/var/lib/jenkins/.sonar/cache/193d1645c91fbb07781506b7df9db0b9/sonar-scanner-engine-shaded-7.5-all.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of com.google.protobuf.UnsafeUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO: Load global settings (done) | time=668ms
+INFO: Server id: 642DF716-AXTtaeMjvzKxlECTn6Yk
+INFO: User cache: /var/lib/jenkins/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=205ms
+INFO: Load/download plugins (done) | time=1148ms
+INFO: Loaded core extensions: 
+INFO: Process project properties
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=5ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=55ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=221ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=3173ms
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=77ms
+INFO: Project key: JavaApp
+INFO: Project base dir: /var/lib/jenkins/workspace/test-freestyle
+INFO: -------------  Scan JavaApp
+INFO: Base dir: /var/lib/jenkins/workspace/test-freestyle
+INFO: Working dir: /var/lib/jenkins/workspace/test-freestyle/.scannerwork
+INFO: Source paths: src
+INFO: Source encoding: UTF-8, default locale: en
+INFO: Index files
+INFO: 3 files indexed
+INFO: Quality profile for java: Sonar way
+INFO: Quality profile for xml: Sonar way
+INFO: Sensor JavaSquidSensor [java]
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization
+ERROR: Invalid value for sonar.java.binaries
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION FAILURE
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 14.720s
+INFO: Final Memory: 12M/47M
+INFO: ------------------------------------------------------------------------
+ERROR: Error during SonarQube Scanner execution
+java.lang.IllegalStateException: No files nor directories matching '**/target/classes'
+	at org.sonar.java.AbstractJavaClasspath.getFilesFromProperty(AbstractJavaClasspath.java:92)
+	at org.sonar.java.JavaClasspath.init(JavaClasspath.java:56)
+	at org.sonar.java.AbstractJavaClasspath.getElements(AbstractJavaClasspath.java:280)
+	at org.sonar.java.SonarComponents.getJavaClasspath(SonarComponents.java:190)
+	at org.sonar.java.JavaSquid.<init>(JavaSquid.java:85)
+	at org.sonar.plugins.java.JavaSquidSensor.execute(JavaSquidSensor.java:92)
+	at org.sonar.scanner.sensor.SensorWrapper.analyse(SensorWrapper.java:45)
+	at org.sonar.scanner.phases.SensorsExecutor.execute(SensorsExecutor.java:88)
+	at org.sonar.scanner.phases.SensorsExecutor.execute(SensorsExecutor.java:62)
+	at org.sonar.scanner.phases.AbstractPhaseExecutor.execute(AbstractPhaseExecutor.java:74)
+	at org.sonar.scanner.scan.ModuleScanContainer.doAfterStart(ModuleScanContainer.java:164)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:136)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:122)
+	at org.sonar.scanner.scan.ProjectScanContainer.scan(ProjectScanContainer.java:319)
+	at org.sonar.scanner.scan.ProjectScanContainer.scanRecursively(ProjectScanContainer.java:314)
+	at org.sonar.scanner.scan.ProjectScanContainer.doAfterStart(ProjectScanContainer.java:288)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:136)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:122)
+	at org.sonar.scanner.task.ScanTask.execute(ScanTask.java:48)
+	at org.sonar.scanner.task.TaskContainer.doAfterStart(TaskContainer.java:82)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:136)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:122)
+	at org.sonar.scanner.bootstrap.GlobalContainer.executeTask(GlobalContainer.java:131)
+	at org.sonar.batch.bootstrapper.Batch.doExecuteTask(Batch.java:116)
+	at org.sonar.batch.bootstrapper.Batch.execute(Batch.java:71)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at com.sun.proxy.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:185)
+	at org.sonarsource.scanner.api.EmbeddedScanner.execute(EmbeddedScanner.java:137)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:112)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:75)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+ERROR: 
+ERROR: Re-run SonarQube Scanner using the -X switch to enable full debug logging.
+WARN: Unable to locate 'report-task.txt' in the workspace. Did the SonarScanner succeed?
+ERROR: SonarQube scanner exited with non-zero code: 1
+Finished: FAILURE

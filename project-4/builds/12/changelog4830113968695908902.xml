@@ -1,0 +1,10 @@
+commit 7c892ee4d9c46b76a4ecdd2d43e38f38f3bfe1d4
+tree 2f5b1cabe6a6a01d6ad299761768e809f45d3afe
+parent 87f56bd3c25591f6572daf04fb7172535522456f
+author Rohit <rohit.100rock@gmail.com> 2020-09-26 23:35:44 +0530
+committer Rohit <rohit.100rock@gmail.com> 2020-09-26 23:35:44 +0530
+
+    Updated Jenkinsfile
+
+
+:100644 100644 fdc58fe208e735b13487482e1aa86087683e4c61 e2cdf4031eb3dd33fe831494747e3960a7c20286 M	Jenkinsfile

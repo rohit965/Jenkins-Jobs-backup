@@ -1,0 +1,140 @@
+Started by user [8mha:////4LnGKCCAp0zVlxlThhV+FjTjl4m/y1eaDP6NcMA3qyRdAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/test-freestyle
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rohit965/LoginWebApp.git # timeout=10
+Fetching upstream changes from https://github.com/rohit965/LoginWebApp.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+ > git fetch --tags --progress -- https://github.com/rohit965/LoginWebApp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 561366a0d5029c064f43f8472ef3408e3759001d (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 561366a0d5029c064f43f8472ef3408e3759001d # timeout=10
+Commit message: "Update README.md"
+ > git rev-list --no-walk 561366a0d5029c064f43f8472ef3408e3759001d # timeout=10
+[test-freestyle] $ /bin/sh -xe /tmp/jenkins8005026655278093550.sh
++ echo Hello World..!
+Hello World..!
+[test-freestyle] $ /usr/share/maven/bin/mvn clean package
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36mcom.nouryon.apps:LoginWebApp[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding LoginWebApp Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/test-freestyle/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/test-freestyle/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M1:test[m [1m(default-test)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:2.2:war[m [1m(default-war)[m @ [36mLoginWebApp[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [LoginWebApp] in [/var/lib/jenkins/workspace/test-freestyle/target/LoginWebApp]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/var/lib/jenkins/workspace/test-freestyle/src/main/webapp]
+[[1;34mINFO[m] Webapp assembled in [80 msecs]
+[[1;34mINFO[m] Building war: /var/lib/jenkins/workspace/test-freestyle/target/LoginWebApp.war
+[[1;34mINFO[m] WEB-INF/web.xml already added, skipping
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.662 s
+[[1;34mINFO[m] Finished at: 2020-10-03T10:46:39Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[test-freestyle] $ /opt/sonarscanner/sonar-scanner-4.1.0.1829-linux/bin/sonar-scanner -Dsonar.host.url=http://10.128.0.50:9000 ******** -Dsonar.projectKey=LoginWebApp -Dsonar.projectName=LoginWebApp -Dsonar.projectVersion=1.0 -Dsonar.sources=/var/lib/jenkins/workspace/test-freestyle/src -Dsonar.java.binaries=**/target/classes -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/test-freestyle
+INFO: Scanner configuration file: /opt/sonarscanner/sonar-scanner-4.1.0.1829-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarQube Scanner 4.1.0.1829
+INFO: Java 11.0.3 AdoptOpenJDK (64-bit)
+INFO: Linux 5.4.0-1025-gcp amd64
+INFO: User cache: /var/lib/jenkins/.sonar/cache
+INFO: SonarQube server 7.5.0
+INFO: Default locale: "en", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Publish mode
+INFO: Load global settings
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.protobuf.UnsafeUtil (file:/var/lib/jenkins/.sonar/cache/193d1645c91fbb07781506b7df9db0b9/sonar-scanner-engine-shaded-7.5-all.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of com.google.protobuf.UnsafeUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO: Load global settings (done) | time=133ms
+INFO: Server id: 642DF716-AXTtaeMjvzKxlECTn6Yk
+INFO: User cache: /var/lib/jenkins/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=74ms
+INFO: Load/download plugins (done) | time=201ms
+INFO: Loaded core extensions: 
+INFO: Process project properties
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=5ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=142ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=62ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=1083ms
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=39ms
+INFO: Project key: LoginWebApp
+INFO: Project base dir: /var/lib/jenkins/workspace/test-freestyle
+INFO: -------------  Scan LoginWebApp
+INFO: Base dir: /var/lib/jenkins/workspace/test-freestyle
+INFO: Working dir: /var/lib/jenkins/workspace/test-freestyle/.scannerwork
+INFO: Source paths: src
+INFO: Source encoding: UTF-8, default locale: en
+INFO: Index files
+INFO: 8 files indexed
+INFO: Quality profile for xml: Sonar way
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=4ms
+INFO: Sensor SonarJavaXmlFileSensor [java]
+INFO: 1 source files to be analyzed
+INFO: Sensor SonarJavaXmlFileSensor [java] (done) | time=281ms
+INFO: 1/1 source files have been analyzed
+INFO: Sensor XML Sensor [xml]
+WARN: Metric 'comment_lines_data' is deprecated. Provided value is ignored.
+INFO: Sensor XML Sensor [xml] (done) | time=326ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=17ms
+INFO: Calculating CPD for 0 files
+INFO: CPD calculation finished
+INFO: Analysis report generated in 327ms, dir size=68 KB
+INFO: Analysis reports compressed in 16ms, zip size=10 KB
+INFO: Analysis report uploaded in 44ms
+INFO: ANALYSIS SUCCESSFUL, you can browse http://10.128.0.50:9000/dashboard?id=LoginWebApp
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://10.128.0.50:9000/api/ce/task?id=AXTuEkZ4Yq-9Nqh2u4Ew
+INFO: Task total time: 6.064 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 9.295s
+INFO: Final Memory: 7M/27M
+INFO: ------------------------------------------------------------------------
+Finished: SUCCESS

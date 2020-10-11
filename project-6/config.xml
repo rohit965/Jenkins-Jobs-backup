@@ -1,0 +1,53 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.7.2"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.7.2">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.83">
+    <script>pipeline {
+    agent any
+    stages {
+        stage(&quot;Code Checkout from Github&quot;) {
+            steps {
+                git branch: &apos;master&apos;,
+                //credentialsId: &apos;github_access_token&apos;
+                url: &apos;https://github.com/rohit965/JavaApp.git&apos;
+            }
+        }
+        stage(&apos;Compile&apos;) {
+            steps {
+                sh &apos;mvn clean compile&apos;
+            }
+        }
+        stage(&quot;Code Quality Check via SonarQube&quot;) {
+            environment {
+                SCANNER_HOME = tool &apos;sonar-scanner-4.1.0&apos;
+            }
+            steps {
+                withSonarQubeEnv(&apos;sonarqube-server&apos;) {
+                    sh &quot;${SCANNER_HOME}/bin/sonar-scanner \
+                    -Dsonar.projectKey=JavaApp \
+                    -Dsonar.projectName=JavaApp \
+                    -Dsonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/src \
+                    -Dsonar.java.binaries=target &quot;
+                }
+                //https://dzone.com/articles/jenkins-pipeline-with-sonarqube-and-gitlab
+                //https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/
+            }
+        }
+    }
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

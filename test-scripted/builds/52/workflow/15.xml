@@ -1,0 +1,50 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.5">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@2.83">
+    <parentIds>
+      <string>14</string>
+    </parentIds>
+    <id>15</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.CoreWrapperStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.83">
+      <arguments>
+        <entry>
+          <string>delegate</string>
+          <org.jenkinsci.plugins.structs.describable.UninstantiatedDescribable plugin="structs@1.20">
+            <symbol>withSonarQubeEnv</symbol>
+            <arguments class="tree-map">
+              <entry>
+                <string>&lt;anonymous&gt;</string>
+                <string>sonarqube-server</string>
+              </entry>
+            </arguments>
+          </org.jenkinsci.plugins.structs.describable.UninstantiatedDescribable>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1602163965451</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+    <wf.a.ErrorAction plugin="workflow-api@2.40">
+      <error class="java.lang.IllegalStateException">
+        <detailMessage>There is no body to invoke</detailMessage>
+        <stackTrace>
+          <trace>org.jenkinsci.plugins.workflow.cps.CpsStepContext.newBodyInvoker(CpsStepContext.java:282)</trace>
+          <trace>org.jenkinsci.plugins.workflow.cps.CpsStepContext.newBodyInvoker(CpsStepContext.java:95)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.CoreWrapperStep$Execution2.doStart(CoreWrapperStep.java:98)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.GeneralNonBlockingStepExecution.lambda$run$0(GeneralNonBlockingStepExecution.java:77)</trace>
+          <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+          <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+          <trace>java.base/java.lang.Thread.run(Thread.java:834)</trace>
+        </stackTrace>
+        <suppressedExceptions class="empty-list"/>
+      </error>
+    </wf.a.ErrorAction>
+  </actions>
+</Tag>
