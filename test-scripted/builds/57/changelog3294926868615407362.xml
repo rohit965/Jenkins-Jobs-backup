@@ -1,0 +1,38 @@
+commit 561366a0d5029c064f43f8472ef3408e3759001d
+tree 23f1604ed49f9dbd6fb4000297481ad5d4a90396
+parent 1bfc800e5344d6efcbf5e2580014f8b4de92e325
+author Rohit R <rohit.100rock@gmail.com> 2020-10-01 17:42:34 +0530
+committer GitHub <noreply@github.com> 2020-10-01 17:42:34 +0530
+
+    Update README.md
+
+:100644 100644 4a8b6851ee69c9a1aab855ebfb57746ca7724fa8 f549390a12c9e31b893951ebaed29e875ad553a6 M	README.md
+commit 1bfc800e5344d6efcbf5e2580014f8b4de92e325
+tree 048f7fcbb48c896787283c705c8510bfb0d5f5ec
+parent acd0e2ff59cc2ed18a7a24348e34208825f83edb
+author Rohit R <rohit.100rock@gmail.com> 2020-10-01 16:55:14 +0530
+committer GitHub <noreply@github.com> 2020-10-01 16:55:14 +0530
+
+    Update README.md
+
+:100644 100644 6423f12dc5ed7e2eb8b381838d65ec769382ff18 4a8b6851ee69c9a1aab855ebfb57746ca7724fa8 M	README.md
+commit acd0e2ff59cc2ed18a7a24348e34208825f83edb
+tree a221689be5e1f9a07ce02507bfea8a06347b3bbe
+parent 767b303e08f097c25245d7d4cc2402cbfdb8b759
+author Rohit Ramteke <rohit.100rock@gmail.com> 2020-10-01 11:22:05 +0000
+committer Rohit Ramteke <rohit.100rock@gmail.com> 2020-10-01 11:22:05 +0000
+
+    Fix Database name in UpperCase
+
+
+:100755 100755 a56f05adb4991d3b8ff60b07085b50a9773a5be5 3aa51f3123d57f4cbcbfa470a5efaf1b3415db4e M	pom.xml
+:100644 100644 620a28804fef1dda5e77a9ff25f269ed440104fe bea767bc76a8e5f2c179d75f6a523e97d8aa3fb0 M	src/main/webapp/login.jsp
+commit 767b303e08f097c25245d7d4cc2402cbfdb8b759
+tree 338afe3d5bf29b5ea5722f74ed59abc3ff12ce33
+parent b655d841cef8cd4d21bc5e12b6a0d1090bc03c7e
+author Rohit R <rohit.100rock@gmail.com> 2020-09-24 17:21:32 +0530
+committer GitHub <noreply@github.com> 2020-09-24 17:21:32 +0530
+
+    Update Jenkinsfile
+
+:100644 100644 dd2f4b4ae9a3edcd8ecaf0fa4d96b618d72f3e4b 093115c14c89d6a5fd95b2d4fb72d01f08c2be02 M	Jenkinsfile

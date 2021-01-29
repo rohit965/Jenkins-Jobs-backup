@@ -1,0 +1,78 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.7.2"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.7.2">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description>Job aims is to upload the build artifacts to nexus repository server using scripted pipeline project</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.83">
+    <script>pipeline {
+    agent {
+        label &apos;master&apos;
+    }
+    //environment {
+        //NEXUS_CREDENTIAL_ID = credentials(&apos;nexus&apos;)
+    //}
+    stages {
+        stage(&apos;Clone code from Github&apos;) {
+            steps {
+                script {
+                    git &apos;https://github.com/rohit965/LoginWebApp.git&apos;
+                }
+            }
+        }
+        stage(&apos;Compile and Build&apos;) {
+            steps {
+                script {
+                    sh &apos;mvn clean package&apos;
+                }
+            }
+        }
+        stage(&apos;Publish Artefact to Nexus Repository Manager&apos;) {
+            environment {
+                NEXUS_VERSION = &apos;nexus3&apos;
+                NEXUS_PROTOCOL = &apos;http&apos;
+                NEXUS_URL = &apos;10.128.0.50:8081&apos;
+                NEXUS_REPOSITORY = &apos;maven-nexus-repo&apos;
+                NEXUS_CREDENTIAL_ID = &apos;nexus-user&apos;
+            }
+            steps {
+                    nexusArtifactUploader(
+                        nexusVersion: &quot;${NEXUS_VERSION}&quot;,
+                            protocol: &quot;${NEXUS_PROTOCOL}&quot;,
+                            nexusUrl: &quot;${NEXUS_URL}&quot;,
+                            groupId: &apos;com.nouryon.apps&apos;,
+                            version: &apos;1.0-SNAPSHOT&apos;,
+                            repository: &quot;${NEXUS_REPOSITORY}&quot;,
+                            credentialsId: &quot;${NEXUS_CREDENTIAL_ID}&quot;,
+                            artifacts: [
+                                [
+                                artifactId: &apos;LoginWebApp&apos;,
+                                classifier: &apos;&apos;,
+                                file: &apos;target/LoginWebApp.war&apos;,
+                                type: &apos;war&apos;
+                                ],
+                                [artifactId: &apos;pom.xml&apos;,
+                                classifier: &apos;&apos;,
+                                file: &apos;pom.xml&apos;,
+                                type: &apos;pom&apos;
+                                ]    
+                            ]
+                    )
+                    
+            }
+        }
+}
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

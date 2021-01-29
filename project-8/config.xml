@@ -1,0 +1,55 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.7.2"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.7.2">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.83">
+    <script>pipeline {
+    agent any
+    stages {
+        stage(&quot;Clone code from Github&quot;) {
+            steps {
+                git branch: &apos;master&apos;
+                //credentialsId: &apos;github_access_token&apos;
+                url: &apos;https://github.com/rohit965/SpringBootHelloWorld.git&apos;
+            }
+        }
+        stage(&quot;Code Quality Check via SonarQube&quot;) {
+            environment {
+                SCANNER_HOME = tool &apos;SonarQubeScanner&apos;
+            steps {
+                withSonarQubeEnv(&apos;sonarqube&apos;) {
+                    scripts {
+                        sh &quot;${SCANNER_HOME}/bin/sonar-scanner \
+                        -Dsonar.projectKey=SpringBootHelloWorld \
+                        -Dsonar.projectName=SpringBootHelloWorld \
+                        -Dsonar.language=java \
+                        -Dsonar.sourceEncoding=UTF-8 \
+                        -Dsonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/src/main \
+                        -Dsonar.java.binaries=target \
+                        -Dsonar.tests=/var/lib/jenkins/workspace/$JOB_NAME/src/test \
+                        -Dsonar.junit.reportsPath=target/surefire-reports \
+                        -Dsonar.surefire.reportsPath=target/surefire-reports \
+                        -Dsonar.java.coveragePlugin=jacoco \
+                        -Dsonar.jacoco.reportPath=target/jacoco.exec &quot;
+                    }
+                }
+            }
+        }
+    }
+}
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

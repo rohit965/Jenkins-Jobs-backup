@@ -1,0 +1,9 @@
+commit e0b9ffb1d5085a27538e432ea8d10ac0ca80bf8e
+tree 42190d96ad3cb76f00eea6fee07af3f04d6675be
+parent 0a60e5e445f2944618fcb324098a54d68b7c8915
+author Rohit R <rohit.100rock@gmail.com> 2020-10-11 16:52:02 +0530
+committer GitHub <noreply@github.com> 2020-10-11 16:52:02 +0530
+
+    Add Jacoco plugin for Code coverage
+
+:100644 100644 7591e4e88fd95305238b09e88a0435acdfaa156d efca448920c981f792bab4dc57771285d6060c4e M	pom.xml

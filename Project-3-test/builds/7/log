@@ -1,0 +1,144 @@
+Started by user [8mha:////4LnGKCCAp0zVlxlThhV+FjTjl4m/y1eaDP6NcMA3qyRdAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/Project-3-test
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rohit965/webapp.git # timeout=10
+Fetching upstream changes from https://github.com/rohit965/webapp.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+ > git fetch --tags --progress -- https://github.com/rohit965/webapp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 0b4afebc493c375035a75ecd87ece149d9db70d9 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0b4afebc493c375035a75ecd87ece149d9db70d9 # timeout=10
+Commit message: "Updated Jenkinsfile"
+ > git rev-list --no-walk 0b4afebc493c375035a75ecd87ece149d9db70d9 # timeout=10
+[Project-3-test] $ /usr/share/maven/bin/mvn clean package
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mlu.amazon.aws.demo:WebApp[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding WebApp Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mWebApp[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/lib/jenkins/workspace/Project-3-test/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mWebApp[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/Project-3-test/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mWebApp[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mWebApp[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/Project-3-test/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mWebApp[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mWebApp[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:2.2:war[m [1m(default-war)[m @ [36mWebApp[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [WebApp] in [/var/lib/jenkins/workspace/Project-3-test/target/WebApp]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/var/lib/jenkins/workspace/Project-3-test/src/main/webapp]
+[[1;34mINFO[m] Webapp assembled in [28 msecs]
+[[1;34mINFO[m] Building war: /var/lib/jenkins/workspace/Project-3-test/target/WebApp.war
+[[1;34mINFO[m] WEB-INF/web.xml already added, skipping
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.338 s
+[[1;34mINFO[m] Finished at: 2021-01-29T19:01:30Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[Project-3-test] $ /bin/sh -xe /tmp/jenkins13578062518226979317.sh
++ hostname
++ echo jenkins-master
+jenkins-master
+[Project-3-test] $ docker build -t rohit965/webapp:7 --pull=true /var/lib/jenkins/workspace/Project-3-test
+Sending build context to Docker daemon  103.4kB
+Step 1/3 : FROM tomcat:8.0-alpine
+8.0-alpine: Pulling from library/tomcat
+Digest: sha256:d02a16c0147fcae13d812fa670a4b3c9944f5328b10a5a463ad697d2aa5bb063
+Status: Image is up to date for tomcat:8.0-alpine
+ ---> 624fb61775c3
+Step 2/3 : COPY target/WebApp.war /usr/local/tomcat/webapps/
+ ---> e510f6850820
+Step 3/3 : EXPOSE 8080
+ ---> Running in cd1b5942b376
+Removing intermediate container cd1b5942b376
+ ---> 9f0c63e4130c
+Successfully built 9f0c63e4130c
+Successfully tagged rohit965/webapp:7
+[Project-3-test] $ docker tag 9f0c63e4130c rohit965/webapp:latest
+[Project-3-test] $ docker inspect 9f0c63e4130c
+[Project-3-test] $ docker push rohit965/webapp:7
+The push refers to repository [docker.io/rohit965/webapp]
+92aa3590eba8: Preparing
+0136a6a85859: Preparing
+98a0db77a14c: Preparing
+9072514c7af0: Preparing
+f6146a44a7d3: Preparing
+0c3170905795: Preparing
+df64d3292fd6: Preparing
+0c3170905795: Waiting
+df64d3292fd6: Waiting
+0136a6a85859: Layer already exists
+f6146a44a7d3: Layer already exists
+98a0db77a14c: Layer already exists
+9072514c7af0: Layer already exists
+0c3170905795: Layer already exists
+df64d3292fd6: Layer already exists
+92aa3590eba8: Pushed
+7: digest: sha256:bc72a1c294ce2d630745511987720d037076a4599162897a2ec195131d8b9143 size: 1782
+[Project-3-test] $ docker push rohit965/webapp:latest
+The push refers to repository [docker.io/rohit965/webapp]
+92aa3590eba8: Preparing
+0136a6a85859: Preparing
+98a0db77a14c: Preparing
+9072514c7af0: Preparing
+f6146a44a7d3: Preparing
+0c3170905795: Preparing
+df64d3292fd6: Preparing
+0c3170905795: Waiting
+df64d3292fd6: Waiting
+98a0db77a14c: Layer already exists
+9072514c7af0: Layer already exists
+0136a6a85859: Layer already exists
+f6146a44a7d3: Layer already exists
+92aa3590eba8: Layer already exists
+df64d3292fd6: Layer already exists
+0c3170905795: Layer already exists
+latest: digest: sha256:bc72a1c294ce2d630745511987720d037076a4599162897a2ec195131d8b9143 size: 1782
+[Project-3-test] $ /bin/sh -xe /tmp/jenkins11305896336048397671.sh
++ ssh -i /var/lib/jenkins/.ssh/id_rsa jenkins@10.128.0.56 docker container run -itd -p 80:8080 --name jenkins-webapp rohit965/webapp:7
+Unable to find image 'rohit965/webapp:7' locally
+7: Pulling from rohit965/webapp
+4fe2ade4980c: Already exists
+6fc58a8d4ae4: Already exists
+7d9bd64c803b: Already exists
+a22aedc5ac11: Already exists
+5bde63ae3587: Already exists
+69cb0c9b940a: Already exists
+96d0dfe82d29: Pulling fs layer
+96d0dfe82d29: Verifying Checksum
+96d0dfe82d29: Download complete
+96d0dfe82d29: Pull complete
+Digest: sha256:bc72a1c294ce2d630745511987720d037076a4599162897a2ec195131d8b9143
+Status: Downloaded newer image for rohit965/webapp:7
+docker: Error response from daemon: Conflict. The container name "/jenkins-webapp" is already in use by container "e1f2fdd42d3d647e83d8dbc116ee7b38d70e0b4a6a00f3460dcdbec7025b0cb3". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

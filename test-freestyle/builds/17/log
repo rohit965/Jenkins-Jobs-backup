@@ -1,0 +1,151 @@
+Started by user [8mha:////4LnGKCCAp0zVlxlThhV+FjTjl4m/y1eaDP6NcMA3qyRdAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/test-freestyle
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rohit965/SpringBootHelloWorld.git # timeout=10
+Fetching upstream changes from https://github.com/rohit965/SpringBootHelloWorld.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+ > git fetch --tags --progress -- https://github.com/rohit965/SpringBootHelloWorld.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision e0b9ffb1d5085a27538e432ea8d10ac0ca80bf8e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e0b9ffb1d5085a27538e432ea8d10ac0ca80bf8e # timeout=10
+Commit message: "Add Jacoco plugin for Code coverage"
+ > git rev-list --no-walk e0b9ffb1d5085a27538e432ea8d10ac0ca80bf8e # timeout=10
+[test-freestyle] $ /bin/sh -xe /tmp/jenkins12219921589683737068.sh
++ echo Hello World..!
+Hello World..!
+[test-freestyle] $ /usr/share/maven/bin/mvn clean package
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36mcom.javahungry:SpringBootHelloWorld[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding SpringBootHelloWorld 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/lib/jenkins/workspace/test-freestyle/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.6:prepare-agent[m [1m(default)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/var/lib/jenkins/workspace/test-freestyle/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 2 source files to /var/lib/jenkins/workspace/test-freestyle/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/test-freestyle/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /var/lib/jenkins/workspace/test-freestyle/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.javahungry.[1mSpringBootHelloWorldApplicationTests[m
+15:21:50.221 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:50.238 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:21:50.284 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:21:50.407 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.javahungry.SpringBootHelloWorldApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:21:50.450 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.javahungry.SpringBootHelloWorldApplicationTests], using SpringBootContextLoader
+15:21:50.466 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.javahungry.SpringBootHelloWorldApplicationTests]: class path resource [com/javahungry/SpringBootHelloWorldApplicationTests-context.xml] does not exist
+15:21:50.468 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.javahungry.SpringBootHelloWorldApplicationTests]: class path resource [com/javahungry/SpringBootHelloWorldApplicationTestsContext.groovy] does not exist
+15:21:50.469 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.javahungry.SpringBootHelloWorldApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:21:50.472 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.javahungry.SpringBootHelloWorldApplicationTests]: SpringBootHelloWorldApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:21:50.608 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:50.846 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/lib/jenkins/workspace/test-freestyle/target/classes/com/javahungry/SpringBootHelloWorldApplication.class]
+15:21:50.850 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.javahungry.SpringBootHelloWorldApplication for test class com.javahungry.SpringBootHelloWorldApplicationTests
+15:21:51.122 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.javahungry.SpringBootHelloWorldApplicationTests]: using defaults.
+15:21:51.123 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:21:51.151 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+15:21:51.156 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+15:21:51.157 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3bbb8c16, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73e1ecd0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11eec06b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65600fb3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25ce435, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7ea71fc2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@19ad75e5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7cd5fcf4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@19cdc217, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5f5297e3]
+15:21:51.161 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.169 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.172 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.172 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.173 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.173 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.182 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4ea1aa52 testClass = SpringBootHelloWorldApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@74123110 testClass = SpringBootHelloWorldApplicationTests, locations = '{}', classes = '{class com.javahungry.SpringBootHelloWorldApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@35342d2f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70e13fa, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3d6a6bee, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3fc05ea2], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:21:51.191 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.191 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.javahungry.SpringBootHelloWorldApplicationTests]
+15:21:51.245 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.8.RELEASE)
+
+2020-10-14 15:21:52.279  INFO 13401 --- [           main] c.j.SpringBootHelloWorldApplicationTests : Starting SpringBootHelloWorldApplicationTests on jenkins-master with PID 13401 (started by jenkins in /var/lib/jenkins/workspace/test-freestyle)
+2020-10-14 15:21:52.282  INFO 13401 --- [           main] c.j.SpringBootHelloWorldApplicationTests : No active profile set, falling back to default profiles: default
+2020-10-14 15:21:56.633  INFO 13401 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-14 15:21:57.282  INFO 13401 --- [           main] c.j.SpringBootHelloWorldApplicationTests : Started SpringBootHelloWorldApplicationTests in 6.011 seconds (JVM running for 8.733)
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.315 s - in com.javahungry.[1mSpringBootHelloWorldApplicationTests[m
+2020-10-14 15:21:58.164  INFO 13401 --- [       Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 1, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.6:report[m [1m(jacoco-report)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /var/lib/jenkins/workspace/test-freestyle/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'SpringBootHelloWorld' with 2 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.1.2:jar[m [1m(default-jar)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Building jar: /var/lib/jenkins/workspace/test-freestyle/target/SpringBootHelloWorld-0.0.1-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.1.8.RELEASE:repackage[m [1m(repackage)[m @ [36mSpringBootHelloWorld[0;1m ---[m
+[[1;34mINFO[m] Replacing main artifact with repackaged archive
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  17.131 s
+[[1;34mINFO[m] Finished at: 2020-10-14T15:22:00Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Uploading artifact SpringBootHelloWorld-0.0.1-SNAPSHOT.jar started....
+GroupId: com.javahungry
+ArtifactId: com.javahungry
+Classifier: 
+Type: jar
+Version: 0.0.1-SNAPSHOT
+File: SpringBootHelloWorld-0.0.1-SNAPSHOT.jar
+Repository:maven-nexus-repo
+Downloading: http://10.128.0.50:8081/repository/maven-nexus-repo/com/javahungry/SpringBootHelloWorld/0.0.1-SNAPSHOT/maven-metadata.xml
+Uploading: http://10.128.0.50:8081/repository/maven-nexus-repo/com/javahungry/SpringBootHelloWorld/0.0.1-SNAPSHOT/SpringBootHelloWorld-0.0.1-20201014.152201-1.jar
+10 % completed (1.7 MB / 17 MB).
+20 % completed (3.4 MB / 17 MB).
+30 % completed (5.0 MB / 17 MB).
+40 % completed (6.7 MB / 17 MB).
+50 % completed (8.4 MB / 17 MB).
+60 % completed (10 MB / 17 MB).
+70 % completed (12 MB / 17 MB).
+80 % completed (13 MB / 17 MB).
+90 % completed (15 MB / 17 MB).
+100 % completed (17 MB / 17 MB).
+Uploaded: http://10.128.0.50:8081/repository/maven-nexus-repo/com/javahungry/SpringBootHelloWorld/0.0.1-SNAPSHOT/SpringBootHelloWorld-0.0.1-20201014.152201-1.jar (17 MB at 14 MB/s)
+Uploading: http://10.128.0.50:8081/repository/maven-nexus-repo/com/javahungry/SpringBootHelloWorld/0.0.1-SNAPSHOT/maven-metadata.xml
+Uploaded: http://10.128.0.50:8081/repository/maven-nexus-repo/com/javahungry/SpringBootHelloWorld/0.0.1-SNAPSHOT/maven-metadata.xml (611 B at 1.9 kB/s)
+Uploading artifact SpringBootHelloWorld-0.0.1-SNAPSHOT.jar completed.
+Finished: SUCCESS

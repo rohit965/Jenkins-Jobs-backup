@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/rohit965/SpringBootHelloWorld.git</url>
+        <url>https://github.com/rohit965/LoginWebApp.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -32,37 +32,30 @@
       <configuredLocalRules/>
     </hudson.tasks.Shell>
     <hudson.tasks.Maven>
-      <targets>clean test</targets>
+      <targets>clean package</targets>
       <mavenName>maven-3.6.0</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
       <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
       <injectBuildVariables>false</injectBuildVariables>
     </hudson.tasks.Maven>
-    <hudson.plugins.sonar.SonarRunnerBuilder plugin="sonar@2.12">
-      <project></project>
-      <properties># Require Metadata
-sonar.projectKey=SpringBootHelloWorld
-sonar.projectName=SpringBootHelloWorld
-
-# Source Information
-sonar.language=java
-sonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/src/main
-sonar.sourceEncoding=UTF-8
-
-# Tests
-sonar.java.binaries=target/classes
-sonar.tests=/var/lib/jenkins/workspace/$JOB_NAME/src/test
-sonar.junit.reportsPath=target/surefire-reports
-sonar.surefire.reportsPath=target/surefire-reports
-sonar.java.coveragePlugin=jacoco
-sonar.jacoco.reportPath=target/jacoco.exec
-</properties>
-      <javaOpts></javaOpts>
-      <additionalArguments></additionalArguments>
-      <jdk>(Inherit From Job)</jdk>
-      <task></task>
-    </hudson.plugins.sonar.SonarRunnerBuilder>
+    <sp.sd.nexusartifactuploader.NexusArtifactUploader plugin="nexus-artifact-uploader@2.13">
+      <nexusVersion>nexus3</nexusVersion>
+      <protocol>http</protocol>
+      <nexusUrl>10.128.0.50:8081</nexusUrl>
+      <groupId>com.nouryon.apps</groupId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>maven-nexus-repo</repository>
+      <artifacts>
+        <sp.sd.nexusartifactuploader.Artifact>
+          <artifactId>LoginWebApp</artifactId>
+          <type>war</type>
+          <classifier></classifier>
+          <file>target/LoginWebApp.war</file>
+        </sp.sd.nexusartifactuploader.Artifact>
+      </artifacts>
+      <credentialsId>nexus-user</credentialsId>
+    </sp.sd.nexusartifactuploader.NexusArtifactUploader>
   </builders>
   <publishers/>
   <buildWrappers/>
