@@ -1,0 +1,143 @@
+Started by user [8mha:////4LnGKCCAp0zVlxlThhV+FjTjl4m/y1eaDP6NcMA3qyRdAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/project-5
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rohit965/JavaApp.git # timeout=10
+Fetching upstream changes from https://github.com/rohit965/JavaApp.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+ > git fetch --tags --progress -- https://github.com/rohit965/JavaApp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 145e1b86690d235e18d32c11b9db94fac52a196e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 145e1b86690d235e18d32c11b9db94fac52a196e # timeout=10
+Commit message: "Initial commit"
+ > git rev-list --no-walk 145e1b86690d235e18d32c11b9db94fac52a196e # timeout=10
+[project-5] $ /bin/sh -xe /tmp/jenkins5182166915227757432.sh
++ echo Hello World..!
+Hello World..!
+[project-5] $ /usr/share/maven/bin/mvn clean package
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------< [0;36mcom.mycompany:JavaApp[0;1m >------------------------[m
+[[1;34mINFO[m] [1mBuilding JavaApp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/lib/jenkins/workspace/project-5/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/project-5/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /var/lib/jenkins/workspace/project-5/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:testResources[m [1m(default-testResources)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/project-5/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /var/lib/jenkins/workspace/project-5/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.1:test[m [1m(default-test)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.mycompany.[1mAppTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in com.mycompany.[1mAppTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 1, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.0.2:jar[m [1m(default-jar)[m @ [36mJavaApp[0;1m ---[m
+[[1;34mINFO[m] Building jar: /var/lib/jenkins/workspace/project-5/target/JavaApp-1.0-SNAPSHOT.jar
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  5.781 s
+[[1;34mINFO[m] Finished at: 2021-02-02T12:13:56Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[project-5] $ /opt/sonarscanner/sonar-scanner-4.1.0.1829-linux/bin/sonar-scanner -Dsonar.host.url=http://10.128.0.50:9000 ******** -Dsonar.projectKey=JavaApp -Dsonar.projectName=JavaApp -Dsonar.sources=/var/lib/jenkins/workspace/project-5/src -Dsonar.java.binaries=target -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/project-5
+INFO: Scanner configuration file: /opt/sonarscanner/sonar-scanner-4.1.0.1829-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarQube Scanner 4.1.0.1829
+INFO: Java 11.0.3 AdoptOpenJDK (64-bit)
+INFO: Linux 5.4.0-1034-gcp amd64
+INFO: User cache: /var/lib/jenkins/.sonar/cache
+ERROR: SonarQube server [http://10.128.0.50:9000] can not be reached
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION FAILURE
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 0.690s
+INFO: Final Memory: 2M/14M
+INFO: ------------------------------------------------------------------------
+ERROR: Error during SonarQube Scanner execution
+org.sonarsource.scanner.api.internal.ScannerException: Unable to execute SonarQube
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.lambda$createLauncher$0(IsolatedLauncherFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.createLauncher(IsolatedLauncherFactory.java:74)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.createLauncher(IsolatedLauncherFactory.java:70)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doStart(EmbeddedScanner.java:181)
+	at org.sonarsource.scanner.api.EmbeddedScanner.start(EmbeddedScanner.java:122)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:73)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+Caused by: java.lang.IllegalStateException: Fail to get bootstrap index from server
+	at org.sonarsource.scanner.api.internal.BootstrapIndexDownloader.getIndex(BootstrapIndexDownloader.java:42)
+	at org.sonarsource.scanner.api.internal.JarDownloader.getScannerEngineFiles(JarDownloader.java:58)
+	at org.sonarsource.scanner.api.internal.JarDownloader.download(JarDownloader.java:53)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.lambda$createLauncher$0(IsolatedLauncherFactory.java:76)
+	... 7 more
+Caused by: java.net.ConnectException: Failed to connect to /10.128.0.50:9000
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.RealConnection.connect(RealConnection.java:183)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:108)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.ExchangeFinder.find(ExchangeFinder.java:88)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.Transmitter.newExchange(Transmitter.java:169)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.RealCall.getResponseWithInterceptorChain(RealCall.java:221)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.RealCall.execute(RealCall.java:81)
+	at org.sonarsource.scanner.api.internal.ServerConnection.callUrl(ServerConnection.java:113)
+	at org.sonarsource.scanner.api.internal.ServerConnection.downloadString(ServerConnection.java:98)
+	at org.sonarsource.scanner.api.internal.BootstrapIndexDownloader.getIndex(BootstrapIndexDownloader.java:39)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.platform.Platform.connectSocket(Platform.java:130)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
+	... 31 more
+ERROR: 
+ERROR: Re-run SonarQube Scanner using the -X switch to enable full debug logging.
+WARN: Unable to locate 'report-task.txt' in the workspace. Did the SonarScanner succeed?
+ERROR: SonarQube scanner exited with non-zero code: 1
+Finished: FAILURE
